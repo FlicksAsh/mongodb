@@ -49,3 +49,5 @@ db.books.insert({
       ]
     }
   ])
+
+  db.books.find().pretty()
