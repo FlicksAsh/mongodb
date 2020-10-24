@@ -78,3 +78,24 @@ db.books.insert({
   // SQL equivalent 
 
   SELECT name, authors FROM books WHERE name = 'Confident Ruby'
+
+  db.books.insert({
+    "name": "Blink",
+    "publishedDate": new Date(),
+    "authors": [
+      { "name": "Malcolm Gladwell" },
+      { "name": "Ghost Writer" }
+    ]
+  });
+  
+  
+  db.books.find(
+    {
+      name: "Blink"
+    },
+    {
+      publishedDate: 1,
+      name: 1,
+      authors: { $slice: 1 }
+    }
+  ).pretty()
