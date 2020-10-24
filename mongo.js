@@ -126,3 +126,15 @@ db.books.find(
 
 
   db.books.findOne({ name: "OOP Programming" } )
+
+
+  db.books.insert({
+    "name": "Deep Work: Rules for Focused Success in a Distracted World",
+    "publishedDate": new Date(),
+    "authors": [
+        {"name": "Cal Newport"}
+    ]
+});
+
+
+db.books.findOne({ name: /.*deep work.*/i })
