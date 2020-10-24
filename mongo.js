@@ -55,3 +55,26 @@ db.books.insert({
   // SQL equivalent 
 
   SELECT * from books
+
+
+  db.books.find( {name: "OOP Programming"} ).pretty()
+
+
+  // SQL equivalent 
+
+  SELECT * from books WHERE name = "OOP Programming"
+
+  db.books.find(
+    {
+      name: "Confident Ruby"
+    },
+    {
+      _id: 0,
+      name: 1,
+      authors: 1
+    }
+  ).pretty()
+
+  // SQL equivalent 
+
+  SELECT name, authors FROM books WHERE name = 'Confident Ruby'
