@@ -9,5 +9,19 @@ db.createUser({
     ]
   })
   
-  db.getUsers()
-  db.dropUser('jon')
+db.getUsers()
+db.dropUser('jon')
+
+db.createCollection('books')
+// { "ok" : 1 }
+
+show collections
+
+db.books.insert({
+    "name": "OOP Programming",
+    "publishedDate": new Date(),
+    "authors": [
+      {"name": "Jon Snow"},
+      {"name": "Ned Stark"}
+    ]
+  })
