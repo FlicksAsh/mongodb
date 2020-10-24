@@ -51,3 +51,7 @@ db.books.insert({
   ])
 
   db.books.find().pretty()
+
+  // SQL equivalent 
+
+  SELECT * from books
