@@ -123,3 +123,6 @@ db.books.find(
       "authors.name": 1
     }
   ).pretty()
+
+
+  db.books.findOne({ name: "OOP Programming" } )
